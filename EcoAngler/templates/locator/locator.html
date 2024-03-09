@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAngler Locator</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="/practice1/templates/about/about.css">
+    <link rel="stylesheet" href="./locator.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-buttons" id="sign-up-btn">
+            <a href="#" class="sign-up-button">Sign Up</a>
+            <div class="overlay" id="sign-up-overlay">
+                <div class="overlay-content">
+                    <span class="overlay-text">Sign Up</span>
+                    <div class="grid-container">
+                        <form>
+                            <label for="full-name">Full Name:</label>
+                            <input type="text" id="full-name" name="full-name" required>
+    
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+    
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+    
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+    
+                            <button id="submit" type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <button class="close-button" onclick="closeOverlay('sign-up-overlay')">Close</button>
+                </div>
+            </div>
+        </div>
+        <h1>EcoAngler</h1>
+        <div class="header-buttons" id="login-btn">
+            <a href="#" class="login-button">Login</a>
+            <div class="overlay" id="login-overlay">
+                <div class="overlay-content">
+                    <span class="overlay-text">Login</span>
+                    <div class="grid-container">
+                        <form>
+                            <label for="username-login">Username:</label>
+                            <input type="text" id="username-login" name="username-login" required>
+    
+                            <label for="password-login">Password:</label>
+                            <input type="password" id="password-login" name="password-login" required>
+    
+                            <button id="submit-login" type="submit">Login</button>
+                        </form>
+                    </div>
+                    <button class="close-button" onclick="closeOverlay('login-overlay')">Close</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<nav>
+    <a href="/practice1/templates/index/index.html">Home</a>
+    <a href="/practice1/templates/about/about.html">About</a>
+    <a href="#" class="active">Locator</a>
+    <a href="/practice1/templates/contact/contact.html">Contact</a>
+</nav>
+
+<main class="locator-page">
+    <div class="left-section">
+        <!-- Your existing left section content goes here -->
+    </div>
+    <div class="right-section">
+        <div id="map"></div>
+        <div id="search-container">
+            <label for="searchInput">Search for a location:</label>
+            <input type="text" id="searchInput" placeholder="Enter a location">
+            <button id="searchBtn">Search</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <img src="/practice1/assets/TCmedia3_Black_Outlined_2_All.png" alt="TCMedia Logo">
+    <p>Copyright &copy; 2024</p>
+</footer>
+
+<script src="./locator.js"></script>
+</body>
+</html>
+
