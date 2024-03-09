@@ -1,0 +1,6 @@
+<nav>
+    <a href="{{ url_for('index') }}" class="{% if active_page == 'index' %}active{% endif %}">Home</a>
+    <a href="{{ url_for('about') }}" class="{% if active_page == 'about' %}active{% endif %}">About</a>
+    <a href="{{ url_for('locator') }}" class="{% if active_page == 'locator' %}active{% endif %}">Locator</a>
+    <a href="{{ url_for('contact') }}" class="{% if active_page == 'contact' %}active{% endif %}">Contact</a>
+</nav>

@@ -29,6 +29,8 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 // Get the button and overlay elements
 const signUpBtn = document.getElementById('sign-up-btn');
 const signUpOverlay = document.getElementById('sign-up-overlay');
@@ -77,3 +79,5 @@ signUpOverlay.addEventListener('click', (event) => {
 loginOverlay.addEventListener('click', (event) => {
     event.stopPropagation();
 });
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------

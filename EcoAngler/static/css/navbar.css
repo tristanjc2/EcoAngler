@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-align: center;
+    padding: var(--p-md);
+    text-decoration: none;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}

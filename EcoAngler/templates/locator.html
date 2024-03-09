@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAngler Locator</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/locator.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    {% set active_page = 'locator' %}
+    {% include 'navbar.html' %}
+
+
+    <main class="locator-page">
+        <div class="left-section">
+            
+        </div>
+        <div class="right-section">
+            <div id="map"></div>
+            <div id="search-container">
+                <label for="searchInput">Search for a location:</label>
+                <input type="text" id="searchInput" placeholder="Enter a location">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/locator.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #3b7d02; /* Green */
+    --secondary-color: #8b572a; /* Brown */
+    --accent-color: #005a8d; /* Blue */
+    
+    --spacing-unit: 0.5rem;
+
+    --m-sm: var(--spacing-unit);
+    --m-md: calc(2 * var(--spacing-unit));
+    --m-lg: calc(4 * var(--spacing-unit));
+
+    --mt: var(--spacing-unit);
+    --mr: var(--spacing-unit);
+    --mb: var(--spacing-unit);
+    --ml: var(--spacing-unit);
+
+    --p-sm: var(--spacing-unit);
+    --p-md: calc(2 * var(--spacing-unit));
+    --p-lg: calc(4 * var(--spacing-unit));
+
+    --pt: var(--spacing-unit);
+    --pr: var(--spacing-unit);
+    --pb: var(--spacing-unit);
+    --pl: var(--spacing-unit);
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: var(--p-lg);
+    position: relative;
+    height: calc(100vh - 100px); /* Adjust based on your footer height */
+    overflow: hidden;
+}
+
+/* CONTACT CARD */
+
+.contact-card form {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-card form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.contact-card form select,
+.contact-card form input,
+.contact-card form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-card form button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-card form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* CONTACT CARD END */
+
+/* MAIN END */
+
+/* MEDIA QUERIES*/
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    header {
+        padding: var(--p-sm);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        margin-top: var(--mt);
+    }
+
+    .sign-up-button,
+    .login-button {
+        margin: var(--m-sm) 0;
+    }
+
+    .grid-container,
+    .contact-card form {
+        width: 100%;
+        padding: var(--p-sm);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        text-align: left; /* Align form elements to the left */
+    }
+    
+    form label {
+        color: #3b7d02;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    form input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: var(--p-md);
+    }
+
+    #hero-carousel {
+        width: 100%;
+        height: 50%; /* Adjust the percentage based on your design */
+    }
+
+    .about-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-section {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-bottom: var(--mb-md);
+    }
+
+    footer {
+        padding: var(--p-sm);
+    }
+
+    footer img {
+        width: 120px; /* Adjust image size for smaller screens */
+    }
+}

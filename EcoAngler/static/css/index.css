@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #3b7d02; /* Green */
+    --secondary-color: #8b572a; /* Brown */
+    --accent-color: #005a8d; /* Blue */
+    
+    --spacing-unit: 0.5rem;
+
+    --m-sm: var(--spacing-unit);
+    --m-md: calc(2 * var(--spacing-unit));
+    --m-lg: calc(4 * var(--spacing-unit));
+
+    --mt: var(--spacing-unit);
+    --mr: var(--spacing-unit);
+    --mb: var(--spacing-unit);
+    --ml: var(--spacing-unit);
+
+    --p-sm: var(--spacing-unit);
+    --p-md: calc(2 * var(--spacing-unit));
+    --p-lg: calc(4 * var(--spacing-unit));
+
+    --pt: var(--spacing-unit);
+    --pr: var(--spacing-unit);
+    --pb: var(--spacing-unit);
+    --pl: var(--spacing-unit);
+}
+
+
+
+main {
+    padding: var(--p-lg);
+    position: relative;
+    height: calc(100vh - 100px); /* Adjust based on your footer height */
+    overflow: hidden;
+}
+
+
+#hero-carousel {
+    width: 75%;
+    height: 70%; /* Adjust the percentage based on your design */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    /* Styles for smaller screens (e.g., tablets and mobile devices) */
+    body {
+        overflow: auto; /* Allow scrollbar on smaller screens */
+    }
+
+    header {
+        padding: var(--p-sm);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        margin-top: var(--mt);
+    }
+
+    .sign-up-button,
+    .login-button {
+        margin: var(--m-sm) 0;
+    }
+
+    .grid-container {
+        width: 100%;
+        padding: var(--p-sm);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        text-align: left; /* Align form elements to the left */
+    }
+    
+    form label {
+        color: #3b7d02;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    form input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: var(--p-md);
+    }
+
+    #hero-carousel {
+        width: 100%;
+        height: 50%; /* Adjust the percentage based on your design */
+    }
+
+}

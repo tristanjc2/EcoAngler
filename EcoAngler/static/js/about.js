@@ -46,3 +46,5 @@ signUpOverlay.addEventListener('click', (event) => {
 loginOverlay.addEventListener('click', (event) => {
     event.stopPropagation();
 });
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------

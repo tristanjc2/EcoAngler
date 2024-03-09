@@ -25,6 +25,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidHJpc3RhbmpjMiIsImEiOiJjbHRqZ241cmowcjV3MnBtd
         }
     });
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 // Get the button and overlay elements
 const signUpBtn = document.getElementById('sign-up-btn');
 const signUpOverlay = document.getElementById('sign-up-overlay');

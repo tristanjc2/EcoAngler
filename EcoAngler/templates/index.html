@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="description" content="Description of your website">
+    <meta name="keywords" content="keywords, separated, by, commas">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAngler Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+    
+    {% set active_page = 'index' %}
+    {% include 'navbar.html' %}
+
+    <main>
+        <!-- Background Blur -->
+        <div class="main-background"></div>
+    
+        <!-- Hero Carousel -->
+        <div id="hero-carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/fly_fishing_stock.jpg') }}" alt="Slide 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/fishing_gear.jpg') }}" alt="Slide 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/laws_stock.jpg') }}" alt="Slide 3">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </main>
+    
+    {% include 'footer.html' %}
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+
+</html>
