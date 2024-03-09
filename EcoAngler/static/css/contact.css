@@ -24,71 +24,60 @@
     --pl: var(--spacing-unit);
 }
 
-body {
-    background-color: var(--secondary-color);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:var(--secondary-color); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
 }
 
-main {
-    padding: var(--p-lg);
-    position: relative;
-    height: calc(100vh - 100px); /* Adjust based on your footer height */
-    overflow: hidden;
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
 }
 
-/* CONTACT CARD */
-
-.contact-card form {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:var(--accent-color);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
 }
-
-.contact-card form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--primary-color);
-}
-
-.contact-card form select,
-.contact-card form input,
-.contact-card form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-
-.contact-card form button {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.contact-card form button:hover {
-    background-color: var(--accent-color);
-}
-
-/* CONTACT CARD END */
-
+[type="submit"]:hover { background:var(--primary-color); }
 /* MAIN END */
 
 /* MEDIA QUERIES*/
 
+/*
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px; 
     }
 
     header {
@@ -119,7 +108,7 @@ main {
         justify-content: center;
         align-items: center;
         width: 75%;
-        text-align: left; /* Align form elements to the left */
+        text-align: left;
     }
     
     form label {
@@ -140,7 +129,7 @@ main {
 
     #hero-carousel {
         width: 100%;
-        height: 50%; /* Adjust the percentage based on your design */
+        height: 50%;
     }
 
     .about-page {
@@ -169,6 +158,6 @@ main {
     }
 
     footer img {
-        width: 120px; /* Adjust image size for smaller screens */
+        width: 120px;
     }
-}
+} */

@@ -59,28 +59,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 
-function handleSubmit(event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
-    // You can add your form submission logic here, for example, sending data to a server
+function openEnvelope() {
+    var topElement = document.querySelector('.top');
+    var messageElement = document.querySelector('.message');
 
-    // Reset the form or perform any other actions after submission
-    alert('Form submitted!'); // Replace this with your desired behavior
+    topElement.classList.toggle('open');
+    messageElement.classList.toggle('pull');
 }
 
-function handleContactMethodChange() {
-    const phoneSection = document.getElementById('phone-section');
-    const emailSection = document.getElementById('email-section');
-    const contactMethodSelect = document.getElementById('contact-method');
-
-    // Toggle visibility of phone and email sections based on the selected contact method
-    if (contactMethodSelect.value === 'phone') {
-        phoneSection.style.display = 'block';
-        emailSection.style.display = 'none';
-    } else if (contactMethodSelect.value === 'email') {
-        phoneSection.style.display = 'none';
-        emailSection.style.display = 'block';
-    }
+function sendMessage() {
+    // Add your logic for sending the message here
+    console.log('Message sent!');
 }
 
+function toggleCardVisibility() {
+    var emailForm = document.getElementById('emailForm');
+    emailForm.classList.toggle('visible');
+    openEnvelope();
+}
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -27,6 +27,7 @@
 
 
 main {
+    background-color: var(--secondary-color);
     padding: var(--p-lg);
     position: relative;
     height: calc(100vh - 100px); /* Adjust based on your footer height */

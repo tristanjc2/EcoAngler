@@ -18,38 +18,38 @@
     {% set active_page = 'about' %}
     {% include 'navbar.html' %}
 
-
-    <main class="about-page">
-        <div class="left-section">
-            <h2>EcoAngler About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo eu turpis pharetra elementum.</p>
-            <p>Nulla facilisi. Nunc ultrices, quam id auctor malesuada, mi nisl feugiat quam, vel pellentesque ligula libero nec orci.</p>
+    <div class="about-page">
+        <div class="container">
+            <div class="left-section">
+                <h2>EcoAngler About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis justo eu turpis pharetra elementum.</p>
+                <p>Nulla facilisi. Nunc ultrices, quam id auctor malesuada, mi nisl feugiat quam, vel pellentesque ligula libero nec orci.</p>
+            </div>
+            <div class="right-section">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='img/team_member1.jpg') }}" alt="Team Member 1">
+                    <p>Jane Smith</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='img/team_member2.jpg') }}" alt="Team Member 2">
+                    <p>John Doe</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='img/team_member3.jpg') }}" alt="Team Member 3">
+                    <p>Emily Brown</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='img/team_member4.jpg') }}" alt="Team Member 4">
+                    <p>Mike Johnson</p>
+                </div>
+            </div>
         </div>
-        <div class="right-section">
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='img/team_member1.jpg') }}" alt="Team Member 1">
-                <p>Jane Smith</p>
-            </div>
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='img/team_member2.jpg') }}" alt="Team Member 2">
-                <p>John Doe</p>
-            </div>
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='img/team_member3.jpg') }}" alt="Team Member 3">
-                <p>Emily Brown</p>
-            </div>
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='img/team_member4.jpg') }}" alt="Team Member 4">
-                <p>Mike Johnson</p>
-            </div>
-        </div>
-    </main>
-    
+    </div>
 
     {% include 'footer.html' %}
 
-    
-    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 </body>
+
 
 </html>
