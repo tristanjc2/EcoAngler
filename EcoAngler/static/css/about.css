@@ -41,16 +41,15 @@ body {
 
 .container {
     display: flex;
+    justify-content: space-between;
 }
 
 .left-section {
     width: 45%;
-    position: sticky;
-    top: 0; /* Stick to the top */
 }
 
 .left-section h2 {
-    color: var(--primary-color);
+    color: white;
 }
 
 .left-section p {
