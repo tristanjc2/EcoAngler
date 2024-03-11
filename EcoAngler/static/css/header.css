@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #3b7d02; /* Green */
+    --primary-color: #3b7d02;
     --p-md: calc(2 * var(--spacing-unit));
     --m-md: calc(2 * var(--spacing-unit));
 }
@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden; /* Hide scrollbar */
+    overflow: hidden;
 }
 
 header {
@@ -53,7 +53,7 @@ header {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Ensure a higher z-index than the elements it should overlay */
+    z-index: 1000;
 }
 
 .overlay-content {
@@ -76,7 +76,7 @@ form {
     justify-content: center;
     align-items: center;
     width: 75%;
-    text-align: left; /* Align form elements to the left */
+    text-align: left;
 }
 
 form label {
@@ -92,17 +92,17 @@ form input {
 }
 
 form button {
-    background-color: #3b7d02; /* Green */
+    background-color: #3b7d02;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px; /* Add margin to separate from the inputs */
+    margin-top: 10px;
 }
 
 form button:hover {
-    background-color: #005a8d; /* Blue */
+    background-color: #005a8d;
 }
 
 .overlay-text {
@@ -116,4 +116,36 @@ form button:hover {
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+.overlayInput,
+.overlayTextarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.overlayButton {
+    background-color: #3b7d02;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.overlayButton:hover {
+    background-color: #005a8d;
+}
+
+.overlayForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjusted to full width */
+    text-align: left;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }

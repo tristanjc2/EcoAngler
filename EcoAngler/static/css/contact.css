@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #3b7d02; /* Green */
-    --secondary-color: #8b572a; /* Brown */
-    --accent-color: #005a8d; /* Blue */
+    --primary-color: #3b7d02;
+    --secondary-color: #8b572a;
+    --accent-color: #005a8d;
     
     --spacing-unit: 0.5rem;
 
@@ -24,144 +24,58 @@
     --pl: var(--spacing-unit);
 }
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-body { background:var(--secondary-color); }
-form { max-width:420px; margin:50px auto; }
+body { background: var(--secondary-color); }
+form { max-width: 420px; margin: 50px auto; }
 
 .feedback-input {
-  color:white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
-  font-size: 18px;
-  border-radius: 5px;
-  line-height: 22px;
-  background-color: transparent;
-  border:2px solid #CC6666;
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width:100%;
-  box-sizing: border-box;
-  outline:0;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #CC6666;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
 }
 
-.feedback-input:focus { border:2px solid var(--primary-color); }
-.feedback-input::after { border:2px solid var(--primary-color); }
+.feedback-input:focus { border: 2px solid var(--primary-color); }
+.feedback-input::after { border: 2px solid var(--primary-color); }
 
 textarea {
-  height: 150px;
-  line-height: 150%;
-  resize:vertical;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
 }
 
-/* [type="submit"] {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 100%;
-  background:var(--accent-color);
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:white;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
-  transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
-} */
-/* [type="submit"]:hover { background:var(--primary-color); } */
 #submitBtn:hover {
     background: var(--primary-color);
 }
-/* MAIN END */
 
-/* MEDIA QUERIES*/
 
-/*
-@media only screen and (max-width: 768px) {
-    body {
-        font-size: 14px; 
-    }
+#contact-form {
+    margin-top: 20px; 
+}
 
-    header {
-        padding: var(--p-sm);
-        flex-direction: column;
-        text-align: center;
-    }
+.feedback-submit {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: var(--accent-color);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
 
-    .header-buttons {
-        flex-direction: column;
-        margin-top: var(--mt);
-    }
-
-    .sign-up-button,
-    .login-button {
-        margin: var(--m-sm) 0;
-    }
-
-    .grid-container,
-    .contact-card form {
-        width: 100%;
-        padding: var(--p-sm);
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 75%;
-        text-align: left;
-    }
-    
-    form label {
-        color: #3b7d02;
-        display: block;
-        margin-bottom: 5px;
-    }
-    
-    form input {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-    }
-
-    main {
-        padding: var(--p-md);
-    }
-
-    #hero-carousel {
-        width: 100%;
-        height: 50%;
-    }
-
-    .about-page {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .left-section,
-    .right-section {
-        width: 100%;
-        text-align: center;
-    }
-
-    .right-section {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .team-member {
-        width: 100%;
-        margin-bottom: var(--mb-md);
-    }
-
-    footer {
-        padding: var(--p-sm);
-    }
-
-    footer img {
-        width: 120px;
-    }
-} */
+.feedback-submit:hover { background: var(--primary-color); }

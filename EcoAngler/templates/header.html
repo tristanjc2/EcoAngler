@@ -5,20 +5,20 @@
             <div class="overlay-content">
                 <span class="overlay-text">Sign Up</span>
                 <div class="grid-container">
-                    <form>
-                        <label for="full-name">Full Name:</label>
-                        <input type="text" id="full-name" name="full-name" required>
+                    <form class="overlayForm" id="sign-up-form">
+                        <label for="full-name-signup">Full Name:</label>
+                        <input type="text" class="overlayInput" id="full-name-signup" name="full-name" required>
     
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="username-signup">Username:</label>
+                        <input type="text" class="overlayInput" id="username-signup" name="username" required>
     
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="password-signup">Password:</label>
+                        <input type="password" class="overlayInput" id="password-signup" name="password" required>
     
-                        <label for="confirm-password">Confirm Password:</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <label for="confirm-password-signup">Confirm Password:</label>
+                        <input type="password" class="overlayInput" id="confirm-password-signup" name="confirm-password" required>
     
-                        <button id="submit" type="submit">Sign Up</button>
+                        <button class="overlayButton" type="submit">Sign Up</button>
                     </form>
                 </div>
                 <button class="close-button" onclick="closeOverlay('sign-up-overlay')">Close</button>
@@ -32,14 +32,14 @@
             <div class="overlay-content">
                 <span class="overlay-text">Login</span>
                 <div class="grid-container">
-                    <form>
+                    <form class="overlayForm" id="login-form">
                         <label for="username-login">Username:</label>
-                        <input type="text" id="username-login" name="username-login" required>
+                        <input type="text" class="overlayInput" id="username-login" name="username-login" required>
     
                         <label for="password-login">Password:</label>
-                        <input type="password" id="password-login" name="password-login" required>
+                        <input type="password" class="overlayInput" id="password-login" name="password-login" required>
     
-                        <button id="submit-login" type="submit">Login</button>
+                        <button class="overlayButton" type="submit">Login</button>
                     </form>
                 </div>
                 <button class="close-button" onclick="closeOverlay('login-overlay')">Close</button>

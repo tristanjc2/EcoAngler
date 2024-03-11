@@ -18,11 +18,11 @@
     {% set active_page = 'contact' %}
     {% include 'navbar.html' %}
 
-    <form>      
-        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <input id="submitBtn" type="submit" value="SUBMIT"/>
+    <form class="contactForm" id="contact-form">      
+        <input name="name" type="text" class="feedback-input" id="name-input" placeholder="Name" />   
+        <input name="email" type="text" class="feedback-input" id="email-input" placeholder="Email" />
+        <textarea name="text" class="feedback-input" id="comment-input" placeholder="Comment"></textarea>
+        <input id="submitBtn" type="submit" class="feedback-submit" value="SUBMIT"/>
     </form>
 
     {% include 'footer.html' %}
