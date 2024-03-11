@@ -47,35 +47,8 @@ loginOverlay.addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Add event listener to the contact form
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', handleSubmit);
-
-    // Add event listener to the contact method select
-    const contactMethodSelect = document.getElementById('contact-method');
-    contactMethodSelect.addEventListener('change', handleContactMethodChange);
-});
-
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 
-function openEnvelope() {
-    var topElement = document.querySelector('.top');
-    var messageElement = document.querySelector('.message');
 
-    topElement.classList.toggle('open');
-    messageElement.classList.toggle('pull');
-}
-
-function sendMessage() {
-    // Add your logic for sending the message here
-    console.log('Message sent!');
-}
-
-function toggleCardVisibility() {
-    var emailForm = document.getElementById('emailForm');
-    emailForm.classList.toggle('visible');
-    openEnvelope();
-}
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 

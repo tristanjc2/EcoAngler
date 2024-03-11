@@ -34,31 +34,102 @@ body {
 
 .locator-page {
   display: flex;
+  height: 150vh;
   justify-content: space-evenly;
+  overflow-y: auto;
 }
 
 #map-container {
-  width: 75%; /* Adjust the width as needed */
-  margin-bottom: 20px; /* Optional margin to create space between the map and search bar */
+  width: 75%;
 }
 
 #map {
   width: 100%;
-  height: 400px; /* Adjust the height as needed */
+  height: 400px;
 }
 
 #search-container {
-  width: 75%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the search container horizontally */
+  width: 75%;
+  margin: 0 auto;
 }
 
-.controls {
-  width: 100%; /* Make the search input fill the container width */
+.main-section {
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.left-section,
+.right-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-section {
+  max-height: 75vh; /* Set a maximum height for the right section */
+  overflow-y: auto; /* Enable vertical scroll for the right section */
+}
+
+#map-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#map {
+  width: 100%;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 75%;
+  max-width: 400px;
+  padding: var(--p-md);
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#searchBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #004170;
+}
+
+/*
 @media only screen and (max-width: 768px) {
   body {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px; 
   }
 
   header {
@@ -88,7 +159,7 @@ body {
       justify-content: center;
       align-items: center;
       width: 75%;
-      text-align: left; /* Align form elements to the left */
+      text-align: left; 
   }
 
   form label {
@@ -109,7 +180,7 @@ body {
 
   #hero-carousel {
     width: 100%;
-    height: 50%; /* Adjust the percentage based on your design */
+    height: 50%; 
   }
 
   .locator-page {
@@ -118,8 +189,8 @@ body {
 
   #map-container,
   #search-container {
-    width: 100%; /* Adjust the width as needed for smaller screens */
-    margin:0; /* Remove margin to make it full-width */
+    width: 100%; 
+    margin:0; 
     padding: var(--p-md);
   }
 
@@ -128,11 +199,11 @@ body {
   }
 
   #map {
-    height: 300px; /* Adjust the height for smaller screens */
+    height: 300px;
   }
 
   .controls {
-    width: 100%; /* Make the search input fill the container width */
+    width: 100%;
   }
 
   footer {
@@ -140,6 +211,7 @@ body {
   }
 
   footer img {
-    width: 120px; /* Adjust image size for smaller screens */
+    width: 120px; 
   }
 }
+*/

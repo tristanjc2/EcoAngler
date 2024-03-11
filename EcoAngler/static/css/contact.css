@@ -46,7 +46,8 @@ form { max-width:420px; margin:50px auto; }
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid #CC4949; }
+.feedback-input:focus { border:2px solid var(--primary-color); }
+.feedback-input::after { border:2px solid var(--primary-color); }
 
 textarea {
   height: 150px;
@@ -54,7 +55,7 @@ textarea {
   resize:vertical;
 }
 
-[type="submit"] {
+/* [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 100%;
   background:var(--accent-color);
@@ -68,8 +69,11 @@ textarea {
   transition: all 0.3s;
   margin-top:-4px;
   font-weight:700;
+} */
+/* [type="submit"]:hover { background:var(--primary-color); } */
+#submitBtn:hover {
+    background: var(--primary-color);
 }
-[type="submit"]:hover { background:var(--primary-color); }
 /* MAIN END */
 
 /* MEDIA QUERIES*/
