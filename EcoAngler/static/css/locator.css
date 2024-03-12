@@ -68,7 +68,6 @@ body {
 .left-section table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: var(--m-lg);
 }
 
 .left-section th, .left-section td {
