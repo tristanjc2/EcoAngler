@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAngler - Location</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/location.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    {% set active_page = 'locator' %}
+    {% include 'navbar.html' %}
+
+    <main class="locator-page">
+        <div class="left-section">
+            <h1>Bodies of Water</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Midas</th>
+                        <th>Miles Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table body will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>    
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/location.js') }}"></script>
+
+</body>
+
+</html>
