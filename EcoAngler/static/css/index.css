@@ -38,6 +38,7 @@ main {
 #hero-carousel {
     width: 75%;
     height: 70%;
+    border-radius: 8px;
     margin: auto;
     overflow: hidden;
     position: relative;
