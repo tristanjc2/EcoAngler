@@ -85,6 +85,22 @@ body {
   background-color: #f9f9f9;
 }
 
+.left-section table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light gray background for odd rows */
+}
+
+.clickable {
+  cursor:pointer;
+}
+
+.clickable:hover {
+  background-color: lightgray;
+}
+
+.clickable.clicked {
+  background-color: #ffcc00; /* Change to the color you prefer */
+}
+
 .left-section,
 .right-section {
   width: 50%;
@@ -242,3 +258,5 @@ input {
     width: 120px; 
   }
 }
+
+/* mapboxgl.accessToken = 'pk.eyJ1IjoidHJpc3RhbmpjMiIsImEiOiJjbHRqZ241cmowcjV3MnBtdWlib3ViM2V4In0.fld_yLFSf8--zkRNSwQzNA'; */
