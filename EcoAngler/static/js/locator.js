@@ -164,22 +164,25 @@ document.addEventListener('DOMContentLoaded', function () {
     function createNameLink(name) {
         var nameLink = document.createElement('a');
         nameLink.textContent = name;
-        nameLink.href = '#';
+        nameLink.href = '/location';
         nameLink.classList.add('clickable');
-        nameLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            clearMainSection(name);
-        });
+        
+        // BELOW IS USED TO TAKE LOCATION OUT OF LOCATOR PAGE AND CLEAR LOCATOR TO REUSE THE SAME PAGE FOR DISPLAYING INFO ON CLICKED BODY OF WATER.
+
+        // nameLink.addEventListener('click', function (event) {
+            // event.preventDefault();
+            // clearMainSection(name);
+        // });
         return nameLink;
     }
 
-    function clearMainSection(locationName) {
-        var mainSection = document.querySelector('main.locator-page');
-        mainSection.innerHTML = '';
-        var h1 = document.createElement('h1');
-        h1.textContent = locationName;
-        mainSection.appendChild(h1);
-    }
+    // function clearMainSection(locationName) {
+    //     var mainSection = document.querySelector('main.locator-page');
+    //     mainSection.innerHTML = '';
+    //     var h1 = document.createElement('h1');
+    //     h1.textContent = locationName;
+    //     mainSection.appendChild(h1);
+    // }
 
     function displayError(message) {
         var errorMessageElement = document.getElementById('error-message');

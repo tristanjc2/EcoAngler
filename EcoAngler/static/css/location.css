@@ -40,6 +40,12 @@
     margin: var(--spacing-unit);
   }
   
+  #back_btn {
+    width:100px;
+    background-color:grey;
+    height:50px;
+    /* padding:10px; */
+  }
   #map-container {
     width: 75%;
   }
