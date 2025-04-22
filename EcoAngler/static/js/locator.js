@@ -162,10 +162,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function createNameLink(name) {
-        var nameLink = document.createElement('a');
+        const nameLink = document.createElement('a');
         nameLink.textContent = name;
-        nameLink.href = '/location';
+        nameLink.href = '/location?name=' + encodeURIComponent(name); // Pass name as query param
         nameLink.classList.add('clickable');
+        return nameLink;
+    }
+
+    // function createNameLink(name) {
+    //     var nameLink = document.createElement('a');
+    //     nameLink.textContent = name;
+    //     nameLink.href = '/location';
+    //     nameLink.classList.add('clickable');
         
         // BELOW IS USED TO TAKE LOCATION OUT OF LOCATOR PAGE AND CLEAR LOCATOR TO REUSE THE SAME PAGE FOR DISPLAYING INFO ON CLICKED BODY OF WATER.
 
@@ -173,8 +181,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // event.preventDefault();
             // clearMainSection(name);
         // });
-        return nameLink;
-    }
+    //     return nameLink;
+    // }
 
     // function clearMainSection(locationName) {
     //     var mainSection = document.querySelector('main.locator-page');
@@ -231,3 +239,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+window.addEventListener('load', () => {
+    if (sessionStorage.getItem('forceReload')) {
+      sessionStorage.removeItem('forceReload'); // Clear the flag
+      location.reload(); // Force full reload
+    }
+  });

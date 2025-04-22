@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #3b7d02;
+    /* --primary-color: #3b7d02; */
     --p-md: calc(2 * var(--spacing-unit));
     --m-md: calc(2 * var(--spacing-unit));
 }

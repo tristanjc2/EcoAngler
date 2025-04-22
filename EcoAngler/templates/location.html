@@ -25,28 +25,16 @@
     {% include 'navbar.html' %}
 
     <main class="locator-page">
-        <button id="back_btn"><i style="margin-right:5px;" class="fa-sharp fa-solid fa-arrow-left"></i>Back</button>
+        <button id="back_btn" onclick="goBack()"><i style="margin-right:5px;" class="fa-sharp fa-solid fa-arrow-left"></i>Back</button>
         <div class="left-section">
-            <h1>Bodies of Water</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Location</th>
-                        <th>Midas</th>
-                        <th>Miles Away</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table body will be populated by JavaScript -->
-                </tbody>
-            </table>
+            <h1> </h1>
         </div>    
-    </main>
+    </main>,
 
     {% include 'footer.html' %}
 
     <script src="{{ url_for('static', filename='js/location.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/locator.js') }}"></script>
 
 </body>
 

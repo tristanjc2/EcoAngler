@@ -54,3 +54,18 @@ loginOverlay.addEventListener('click', (event) => {
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+function goBack() {
+    sessionStorage.setItem('forceReload', 'true'); // Set flag BEFORE going back
+    window.history.back(); // Then go back
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    if (name) {
+      const h1 = document.querySelector('.left-section h1');
+      if (h1) {
+        h1.textContent = name;
+      }
+    }
+  });
